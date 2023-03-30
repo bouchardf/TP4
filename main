@@ -93,8 +93,8 @@ class MyGame(arcade.Window):
         height = random.randint(10, 30)
         color = random.choice(COLORS)
         angle = random.randint(0, 360)
-        chose = Balle(x, y, change_x, change_y, rayon, color)
-        truc = Rectangle(x, y, change_x, change_y, width, height, color, angle)
+        chose = Balle(random.randint(0 + rayon, 800), random.randint(0 + rayon, 600), change_x, change_y, rayon, random.choice(COLORS))
+        truc = Rectangle(x, y, change_x, change_y, width, height, random.choice(COLORS), angle)
 
         self.liste_balles.append(chose)
         self.liste_rectangles.append(truc)
